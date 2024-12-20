@@ -3,6 +3,7 @@
 #include "AbilitySystem/MyAttributeSet.h"
 #include "Player/MyPlayerState.h"
 #include "Helper.h"
+#include "UI/MyHud.h"
 
 
 APlayerCharacter::APlayerCharacter()
@@ -19,6 +20,17 @@ void APlayerCharacter::InitAbilitySystemComponent()
 	AbilitySystemComponent->InitAbilityActorInfo(PS, this);
 }
 
+void APlayerCharacter::InitHud()
+{
+	if (const APlayerController* PC = Cast<APlayerController>(GetController()))
+	{
+		if (AMyHud* Hud = Cast<AMyHud>(PC->GetHUD()))
+		{
+			Hud->Init();
+		}
+	}
+}
+
 void APlayerCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
@@ -26,6 +38,7 @@ void APlayerCharacter::PossessedBy(AController* NewController)
 	InitAbilitySystemComponent();
 	GiveDefaultAbilities();
 	InitDefaultAttributes();
+	InitHud();
 }
 
 void APlayerCharacter::OnRep_PlayerState()
@@ -34,22 +47,4 @@ void APlayerCharacter::OnRep_PlayerState()
 
 	InitAbilitySystemComponent();
 	InitDefaultAttributes();
-}
-
-void APlayerCharacter::BeginPlay()
-{
-	Super::BeginPlay();
-
-	PRINT("Hello, %s", *FString(__FUNCTION__));
-
-	const FVector TargetLocation(1745, 600, 200);
-	DrawSphere(GetWorld(), TargetLocation);	
-}
-
-void APlayerCharacter::Tick(float DeltaSeconds)
-{
-	Super::Tick(DeltaSeconds);
-	const FVector TargetLocation(1745, 600, 400);
-	DrawSphereTick(GetWorld(), TargetLocation);
-	DrawLineTick(GetWorld(), GetActorLocation(), TargetLocation);
 }

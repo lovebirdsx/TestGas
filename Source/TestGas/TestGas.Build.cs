@@ -18,6 +18,7 @@ public class TestGas : ModuleRules
 			"GameplayAbilities",
 			"GameplayTags",
 			"GameplayTasks",
+			"UMG",
 		});
 		
 		PublicIncludePaths.AddRange(new string[] 

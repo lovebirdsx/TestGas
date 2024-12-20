@@ -17,9 +17,7 @@ public:
 	virtual void PossessedBy(AController* NewController) override;
 	virtual void OnRep_PlayerState() override;
 
-	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaSeconds) override;
-
 private:
 	void InitAbilitySystemComponent();
+	void InitHud();
 };

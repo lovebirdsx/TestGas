@@ -48,4 +48,5 @@ void APlayerCharacter::OnRep_PlayerState()
 
 	InitAbilitySystemComponent();
 	InitDefaultAttributes();
+	InitHud();
 }

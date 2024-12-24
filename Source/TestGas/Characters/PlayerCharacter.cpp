@@ -18,6 +18,7 @@ void APlayerCharacter::InitAbilitySystemComponent()
 
 	AbilitySystemComponent = CastChecked<UMyAbilitySystemComponent>(PS->GetAbilitySystemComponent());
 	AbilitySystemComponent->InitAbilityActorInfo(PS, this);
+	AbilitySystemComponent->AddAttributeSetSubobject(PS->GetAttributeSet());
 }
 
 void APlayerCharacter::InitHud()

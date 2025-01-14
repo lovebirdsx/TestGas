@@ -5,10 +5,12 @@ using UnrealBuildTool;
 public class TestGas : ModuleRules
 {
 	public TestGas(ReadOnlyTargetRules Target) : base(Target)
-	{
+	{		
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] 
+		PublicDependencyModuleNames.AddRange(new string[]{});
+		
+		PrivateDependencyModuleNames.AddRange(new string[]
 		{
 			"Core", 
 			"CoreUObject",
@@ -19,6 +21,9 @@ public class TestGas : ModuleRules
 			"GameplayTags",
 			"GameplayTasks",
 			"UMG",
+			"UnrealEd",
+			"LiveCoding",
+			"SessionFrontend"
 		});
 		
 		PublicIncludePaths.AddRange(new string[] 

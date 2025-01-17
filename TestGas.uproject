@@ -7,19 +7,18 @@
 		{
 			"Name": "TestGas",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine"
-			]
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "TestGasEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
 		{
 			"Name": "ModelingToolsEditorMode",
-			"Enabled": true,
-			"TargetAllowList": [
-				"Editor"
-			]
+			"Enabled": true
 		},
 		{
 			"Name": "GameplayAbilities",
@@ -27,10 +26,6 @@
 		},
 		{
 			"Name": "GameFeatures",
-			"Enabled": true
-		},
-		{
-			"Name": "GameFeatureTest",
 			"Enabled": true
 		},
 		{

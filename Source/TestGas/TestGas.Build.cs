@@ -21,9 +21,6 @@ public class TestGas : ModuleRules
 			"GameplayTags",
 			"GameplayTasks",
 			"UMG",
-			"UnrealEd",
-			"LiveCoding",
-			"SessionFrontend"
 		});
 		
 		PublicIncludePaths.AddRange(new string[] 

@@ -5,7 +5,7 @@
 #include "MyBpLib.generated.h"
 
 UCLASS(Blueprintable)
-class TESTGAS_API UMyBPLib : public UBlueprintFunctionLibrary
+class TESTGASEDITOR_API UMyBPLib : public UBlueprintFunctionLibrary
 {
 	GENERATED_BODY()
 

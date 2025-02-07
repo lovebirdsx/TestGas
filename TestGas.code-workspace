@@ -1,0 +1,45 @@
+{
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "../../UE_5.5/Engine/Source/Runtime"
+    },
+    {
+      "path": "../../UE_5.5/Engine/Source/Editor"
+    },
+    {
+      "path": "../../UE_5.5/Engine/Source/Developer"
+    },
+    {
+      "path": "../../UE_5.5/Engine/Plugins/Runtime/GameplayAbilities"
+    }
+  ],
+  "settings": {
+    "C_Cpp.intelliSenseEngine": "Tag Parser",
+    "files.associations": {
+      "*.python": "python",
+      "*.stg": "plaintext",
+      "*.list": "plaintext",
+      "*.gui_script": "lua",
+      "*.script": "lua",
+      "*.project": "ini",
+      "*.txt": "plaintext",
+      "*.render_script": "lua",
+      "*.pac": "javascript",
+      "*.json": "jsonc",
+      "*.uplugin": "json",
+      "*.layer": "json",
+      "*.bat": "bat",
+      "*.uproject": "json",
+      ".p4config": "ini",
+      "*.asset": "yaml",
+      "*.unity": "yaml",
+      "*.prefab": "yaml",
+      "*.sch": "json",
+      "*.vsp": "json",
+      "xiosbase": "cpp"
+    }
+  }
+}

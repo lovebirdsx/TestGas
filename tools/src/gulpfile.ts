@@ -1,9 +1,12 @@
 import * as gulp from 'gulp';
 import * as path from 'path';
-
 import { log } from 'gulp-util';
 
+import './packages/testGas';
+
 import { cleanDir } from './common/util';
+import { getConfig } from './config';
+import { setExecVerbose } from './common/exec';
 
 const workingDir = path.resolve(__dirname, '../..');
 
@@ -18,3 +21,12 @@ gulp.task('clean', (cb: () => void): void => {
 
     cb();
 });
+
+function init() {
+    const config = getConfig();
+    if (config.verbose) {
+        setExecVerbose(true);
+    }
+}
+
+init();

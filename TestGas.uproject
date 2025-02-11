@@ -35,6 +35,10 @@
 		{
 			"Name": "ContentOnlyGameFeatureTest",
 			"Enabled": true
+		},
+		{
+			"Name": "CppGameFeatureTest",
+			"Enabled": true
 		}
 	]
 }

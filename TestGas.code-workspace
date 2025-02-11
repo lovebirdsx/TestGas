@@ -14,6 +14,12 @@
     },
     {
       "path": "../../UE_5.5/Engine/Plugins/Runtime/GameplayAbilities"
+    },
+    {
+      "path": "../../UE_5.5/Engine/Plugins/Runtime/GameFeatures"
+    },
+    {
+      "path": "../../UE_5.5/Engine/Plugins/Runtime/ModularGameplay"
     }
   ],
   "settings": {
@@ -39,7 +45,8 @@
       "*.prefab": "yaml",
       "*.sch": "json",
       "*.vsp": "json",
-      "xiosbase": "cpp"
+      "xiosbase": "cpp",
+      "filesystem": "cpp"
     }
   }
 }

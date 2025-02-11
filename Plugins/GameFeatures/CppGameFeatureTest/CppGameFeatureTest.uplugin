@@ -2,8 +2,8 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "GameFeatureTest",
-	"Description": "Game Feature Test",
+	"FriendlyName": "CppGameFeatureTest",
+	"Description": "Game Feature (with C++) Test",
 	"Category": "Game Features",
 	"CreatedBy": "lovebird",
 	"CreatedByURL": "",
@@ -15,6 +15,13 @@
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,
+	"Modules": [
+		{
+			"Name": "CppGameFeatureTestRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
 	"ExplicitlyLoaded": true,
 	"BuiltInInitialFeatureState": "Active"
 }

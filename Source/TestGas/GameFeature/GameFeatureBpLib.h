@@ -11,6 +11,9 @@ class TESTGAS_API UGameFeatureBpLib : public UBlueprintFunctionLibrary
 
 public:
     UFUNCTION(BlueprintCallable)
+    static FString GetGameFeatureStatus(class UGameFeaturesSubsystem *Subsystem, const FString &InFeature);
+
+    UFUNCTION(BlueprintCallable)
     static void LoadGameFeature(class UGameFeaturesSubsystem *Subsystem, const FString &InFeature);
 
     UFUNCTION(BlueprintCallable)

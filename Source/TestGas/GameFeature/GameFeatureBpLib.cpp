@@ -3,6 +3,37 @@
 #include "GameFeaturesProjectPolicies.h"
 #include "GameFeaturePluginOperationResult.h"
 
+FString UGameFeatureBpLib::GetGameFeatureStatus(UGameFeaturesSubsystem *Subsystem, const FString &InFeature)
+{
+    FString PluginURL;
+    bool bOk = Subsystem->GetPluginURLByName(InFeature, PluginURL);
+    if (bOk)
+    {
+        if (Subsystem->IsGameFeaturePluginActive(PluginURL))
+        {
+            return TEXT("Active");
+        }
+        else if (Subsystem->IsGameFeaturePluginRegistered(PluginURL))
+        {
+            return TEXT("Registered");
+        }
+        else if (Subsystem->IsGameFeaturePluginLoaded(PluginURL))
+        {
+            return TEXT("Loaded");
+        }
+        else if (Subsystem->IsGameFeaturePluginInstalled(PluginURL))
+        {
+            return TEXT("Installed");
+        }
+        else
+        {
+            return TEXT("Unknown");
+        }
+    }
+
+    return FString();
+}
+
 void UGameFeatureBpLib::LoadGameFeature(UGameFeaturesSubsystem *Subsystem, const FString &InFeature)
 {
     FString PluginURL;
